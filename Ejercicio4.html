@@ -6,17 +6,31 @@
     <title>Ejercicio 4</title>
 </head>
 <body>
-    <p id="ejercicio4"></p>
+    <p id="array"></p>
+    <p id="cantidadpares"></p>
+    <p id="cantidadimpares"></p>
     <script>
         let arraynumeros = [];
-        let num = parseInt(prompt("Introduce un número entero: "));
+        let num;
         for (;;) {
-            if ((num != 0) && (!isNan(num))) { break; }
+            num = parseInt(prompt("Introduce un número entero: "));
+            if ((num === 0) || (isNaN(num))) { break; }
             arraynumeros.push(num);
-            let num = parseInt(prompt("Introduce un número entero: "));
+            
         };
-        
-
+        let pares = 0;
+        let impares = 0;
+        for (let i = 0; i < arraynumeros.length; i++) {
+            if (arraynumeros[i] % 2 == 0) {
+                pares++;
+            }
+            else {
+                impares++;
+            }
+        }
+        document.getElementById("array").innerHTML = "Array: " + arraynumeros;
+        document.getElementById("cantidadpares").innerHTML = "Pares: " + pares;
+        document.getElementById("cantidadimpares").innerHTML = "Impares: " + impares;
     </script>
 </body>
 </html>

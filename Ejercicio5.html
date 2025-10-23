@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <p id="ejercicio5"></p>
+    <script>
+        let numeros = parseInt(prompt("Introduce cuantos números quieres que tenga el array:"));
+        let arraynumeros = [];
+        for (let i = 0; i < numeros; i++) {
+            
+            let numero = parseFloat(prompt("Introduce un número:"));
+            arraynumeros.push(numero);
+
+        }
+        let valornum = prompt("Introduce un valor (v/i): ")
+        function maspequeño(array, valor) {
+            let maspequeño = array[0];
+            for (let j = 1; j < array.length; j++) {
+                if (array[j] < maspequeño) {
+                    maspequeño = array[j];
+                }
+            }
+            if (valor === "v") {
+                return maspequeño
+            } else if (valor === "i") {
+                let indice = array.indexOf(maspequeño);
+                return indice
+            }  else {
+                return "Valor incorrecto"
+            }
+        }
+        document.getElementById("ejercicio5").innerHTML = maspequeño(arraynumeros, valornum);
+    </script>
+</body>
+</html>

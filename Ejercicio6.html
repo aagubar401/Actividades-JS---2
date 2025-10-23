@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <p id="ejercicio6"></p>
+    <script>
+        let letraabuscar = prompt("Escribe una letra para buscarla en el array: ");
+        let numeroletras = parseInt(prompt("Escribe cuantas letras tiene que tener el array: "));
+        let arrayletras = [];
+        for (let i = 0; i < numeroletras; i++) {
+            
+            let letra = prompt("Introduce una letra para introducirla en el array:");
+            arrayletras.push(letra);
+
+        }
+        function letrainarray(letra, array) {
+            let dentrodearray = false;
+            for (let j = 0; j < array.length; j++) {
+                if (letra === array[j]) {
+                    dentrodearray = true;
+                }
+            }
+            return dentrodearray
+        }
+        document.getElementById("ejercicio6").innerHTML = letrainarray(letraabuscar, arrayletras);
+    </script>
+</body>
+</html>

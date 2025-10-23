@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <p id="ejercicio7"></p>
+    <script>
+        let letraelegida = prompt("Introduce una letra: ")
+        function esVocal(letra) {
+            const vocales = ["A","a","E","e","I","i","O","o","U","u"];
+            return vocales.includes(letra);
+        }
+        document.getElementById("ejercicio7").innerHTML = esVocal(letraelegida)
+    </script>
+</body>
+</html>
