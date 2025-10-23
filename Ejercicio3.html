@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <p id="ejercicio3"></p>
+    <script>
+        let numeros = parseInt(prompt("Introduce cuantos números quieres que tenga el array:"));
+        let arraynumeros = [];
+        for (let i = 0; i < numeros; i++) {
+            
+            let numero = parseFloat(prompt("Introduce un número:"));
+            arraynumeros.push(numero);
+
+        }
+        function sumaarray(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum
+        }
+
+        document.getElementById("ejercicio3").innerHTML = "La suma de los elementos del array es: " + sumaarray(arraynumeros);
+    </script>
+</body>
+</html>
