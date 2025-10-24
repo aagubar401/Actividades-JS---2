@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <p id="ejercicio9"></p>
+    <script>
+        arraydias = [{dia: "lunes", nombre: "Maria"}, {dia: "martes", nombre: "Luis"}, {dia: "miercoles", nombre: "Antonia"}, {dia: "jueves", nombre: "Pedro"}, {dia: "viernes", nombre: "Marisa"}];
+        function personapordia(dia) {
+            let dias = [];
+            for (i = 0; i < arraydias.length; i++) {
+                dias.push(arraydias[i].dia);
+            }
+            if (!dias.includes(dia)) {
+                return "No hay servicio este dia"
+            } else {
+                for (j = 0; j < arraydias.length; j++){
+                    if (arraydias[j].dia === dia) {
+                        let trabajador = arraydias[j].nombre;
+                        return "Este dia se encarga " + trabajador;
+                    }
+                }
+                
+            }
+        }
+        diapedido = prompt("Introduce un dia de la semana EN MINUSCULAS: ")
+        document.getElementById("ejercicio9").innerHTML = personapordia(diapedido)
+    </script>
+</body>
+</html>

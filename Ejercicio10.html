@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <p id="ejercicio10"></p>
+    <script>
+        arrayproductos = [{producto: "monitor", precio: 170}, {producto: "teclado", precio: 20}, {producto: "raton", precio: 10}];
+        function precioporproducto(producto) {
+            let productos = [];
+            for (i = 0; i < arrayproductos.length; i++) {
+                productos.push(arrayproductos[i].producto);
+            }
+            if (!productos.includes(producto)) {
+                return "No existe este producto"
+            } else {
+                for (j = 0; j < arrayproductos.length; j++){
+                    if (arrayproductos[j].producto === producto) {
+                        let precio = arrayproductos[j].precio;
+                        return "Este producto cuesta " + precio + " €";
+                    }
+                }
+                
+            }
+        }
+        productopedido = prompt("Introduce un producto de la tienda EN MINÚSCULAS: ")
+        document.getElementById("ejercicio10").innerHTML = precioporproducto(productopedido)
+    </script>
+</body>
+</html>
